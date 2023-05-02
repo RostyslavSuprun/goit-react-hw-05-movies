@@ -8,10 +8,10 @@ import {
   MoreInfoList,
   Box,
   GoBack,
-} from '../Layout/Layout.styles';
+} from '../components/Layout/Layout.styles';
 import { movieInfoRequest } from '../Api/Api';
-import { AboutMovie } from '../AboutMovie/AboutMovie';
-import { EventsLoader } from '../Loader/Loader';
+import { AboutMovie } from '../components/AboutMovie/AboutMovie';
+import { EventsLoader } from '../components/Loader/Loader';
 
 // /сторінка з детальною інформацією про кінофільм
 const MovieDetails = () => {

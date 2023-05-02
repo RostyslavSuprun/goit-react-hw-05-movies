@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-import { reviewsRequest } from '../Api/Api';
+import { reviewsRequest } from '../../Api/Api';
 import { ReviewsInfoList } from './Reviews.styles';
 import { DataTable } from '../Loader/Loader';
 //компонент Reviews, інформація про огляди. Рендериться на сторінці MovieDetails.

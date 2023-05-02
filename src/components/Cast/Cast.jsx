@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-import { castRequest } from '../Api/Api';
+import { castRequest } from '../../Api/Api';
 import { CastList, NoImage } from './Cast.styles';
 import { Catalog } from 'components/Loader/Loader';
 

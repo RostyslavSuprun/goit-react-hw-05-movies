@@ -7,11 +7,7 @@ axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
 // https://api.themoviedb.org/3/trending/all/day?api_key=<<api_key>>
 export async function trendingmoviesRequest() {
   try {
-    const response = await axios.get(`trending/movie/day?`, {
-      params: {
-        api_key: KEY,
-      },
-    });
+    const response = await axios.get(`trending/movie/day?api_key=${KEY}`, {});
     return response;
   } catch (error) {
     console.log('error', error);
@@ -22,9 +18,8 @@ export async function trendingmoviesRequest() {
 // https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
 export async function movieInfoRequest(movieId) {
   try {
-    const response = await axios.get(`movie/${movieId}`, {
+    const response = await axios.get(`movie/${movieId}?api_key=${KEY}`, {
       params: {
-        api_key: KEY,
         language: 'en-US',
       },
     });
@@ -39,9 +34,8 @@ export async function movieInfoRequest(movieId) {
 //https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&language=en-US&page=1&include_adult=false
 export async function moviesQueryRequest(search) {
   try {
-    const response = await axios.get(`search/movie`, {
+    const response = await axios.get(`search/movie?api_key=${KEY}`, {
       params: {
-        api_key: KEY,
         language: 'en-US',
         query: search,
         include_adult: false,
@@ -59,12 +53,14 @@ export async function moviesQueryRequest(search) {
 //https://api.themoviedb.org/3/movie/{movie_id}/credits?api_key=<<api_key>>&language=en-US
 export async function castRequest(movieId) {
   try {
-    const response = await axios.get(`movie/${movieId}/credits`, {
-      params: {
-        api_key: KEY,
-        language: 'en-US',
-      },
-    });
+    const response = await axios.get(
+      `movie/${movieId}/credits?api_key=${KEY}`,
+      {
+        params: {
+          language: 'en-US',
+        },
+      }
+    );
     // console.log('response in Api', response);
     return response;
   } catch (error) {
@@ -76,13 +72,15 @@ export async function castRequest(movieId) {
 //https://api.themoviedb.org/3/movie/{movie_id}/reviews?api_key=<<api_key>>&language=en-US&page=1
 export async function reviewsRequest(movieId) {
   try {
-    const response = await axios.get(`movie/${movieId}/reviews`, {
-      params: {
-        api_key: KEY,
-        language: 'en-US',
-        page: 1,
-      },
-    });
+    const response = await axios.get(
+      `movie/${movieId}/reviews?api_key=${KEY}`,
+      {
+        params: {
+          language: 'en-US',
+          page: 1,
+        },
+      }
+    );
     // console.log('response in Api', response);
     return response;
   } catch (error) {

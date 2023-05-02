@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Container, MoviesList } from '../Layout/Layout.styles';
+import { Container, MoviesList } from '../components/Layout/Layout.styles';
 import { trendingmoviesRequest } from '../Api/Api';
 
 const Home = () => {

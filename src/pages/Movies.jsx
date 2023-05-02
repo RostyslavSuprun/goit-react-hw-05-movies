@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Link, useSearchParams, useLocation } from 'react-router-dom';
 
-import { Container, Form, MoviesList } from '../Layout/Layout.styles';
+import {
+  Container,
+  Form,
+  MoviesList,
+} from '../components/Layout/Layout.styles';
 import { moviesQueryRequest } from '../Api/Api';
 
 // сторінка пошуку кінофільмів за ключовим словом.
